@@ -1,7 +1,7 @@
 -- Global settings.
 
 -- Colorscheme
-vim.cmd [[colorscheme moonfly]]
+vim.cmd("colorscheme github_dark_default")
 
 -- Commands
 vim.opt.clipboard = "unnamedplus" -- the system clipboard for yanks

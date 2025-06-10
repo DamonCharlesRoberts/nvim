@@ -5,6 +5,7 @@ return {
             "hrsh7th/cmp-nvim-lsp"
             , "L3MON4D3/LuaSnip"
             , "saadparwaiz1/cmp_luasnip"
+            , "kdheepak/cmp-latex-symbols"
         }
         , config = function()
             local has_words_before = function()
@@ -52,6 +53,12 @@ return {
             , sources = {
                 { name = "nvim_lsp" }
                 , { name = "luasnip" }
+                , { 
+                    name = "latex_symbols" 
+                    , option = {
+                            strategy = 0
+                        }
+                }
             }
         })
         end

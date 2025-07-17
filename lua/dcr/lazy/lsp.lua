@@ -82,27 +82,27 @@ return {
 			})
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					--					"pyright",
+					"pyright",
 					"ruff",
 				},
 			})
 			local lspconfig = require("lspconfig")
-			--			lspconfig.pyright.setup({
-			--				capabilities = capabilities,
-			--				settings = {
-			--					pyright = {
-			--						-- Using Ruff's import organizer
-			--						disableOrganizeImports = true,
-			--						diagnosticMode = "off",
-			--					},
-			--					python = {
-			--						analysis = {
-			--							-- Ignore all files for analysis to exclusively use Ruff for linting
-			--							ignore = { "*" },
-			--						},
-			--					},
-			--				},
-			--			})
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+				settings = {
+					python = {
+						analysis = {
+							diagnosticMode = "off",
+							typeCheckingMode = "basic",
+							autoSearchPaths = true,
+							useLibraryCodeForTypes = true,
+						},
+					},
+					pyright = {
+						disableOrganizeImports = true,
+					},
+				},
+			})
 			lspconfig.ruff.setup({})
 		end,
 	},
@@ -130,7 +130,6 @@ return {
 				format_on_save = {
 					lsp_fallback = true,
 					async = false,
-					timeout_ms = 1000,
 				},
 			})
 		end,

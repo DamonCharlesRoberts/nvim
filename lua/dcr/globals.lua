@@ -12,6 +12,7 @@ vim.opt.nu = true -- Line numbers
 vim.opt.relativenumber = true -- Relative line numbers.
 
 -- Tab spacing to 2 spaces
+-- - check ftplugins for exceptions.
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2

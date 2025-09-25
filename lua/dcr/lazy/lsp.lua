@@ -83,10 +83,8 @@ return {
 				automatic_installation = true,
 			})
 
-			local lspconfig = require("lspconfig")
-
 			-- Manual setup for Pyright
-			lspconfig.pyright.setup({
+			vim.lsp.config("pyright", {
 				capabilities = capabilities,
 				settings = {
 					python = {
@@ -104,7 +102,7 @@ return {
 			})
 
 			-- Manual setup for Ruff
-			lspconfig.ruff.setup({
+			vim.lsp.config("ruff", {
 				capabilities = capabilities,
 			})
 

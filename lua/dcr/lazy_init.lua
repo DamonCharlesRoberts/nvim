@@ -12,7 +12,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-	spec = "dcr.lazy",
+require("lazy").setup("dcr.lazy", {
 	checker = { enabled = true },
+	rocks = {
+		enabled = false,
+		hererocks = false,
+	},
+	pkg = {
+		sources = { "lazy", "packspec" },
+	},
 })
